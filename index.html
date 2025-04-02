@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Corretores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            background: linear-gradient(to bottom, #e0e0e0, #ffffff);
+        }
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 350px;
+            margin-top: 20px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .input-group input,
+        input {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .input-group input {
+            width: 48%;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5e7dad;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #5e7dad;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Cadastro de Corretores</h2>
+        <div class="input-group">
+            <input type="text" id="cpf" placeholder="Digite o seu CPF" required>
+            <input type="text" id="creci" placeholder="Digite o seu Creci" required>
+        </div>
+        <input type="text" id="nome" placeholder="Digite o seu nome" required>
+        <p id="error-message" class="error"></p>
+        <button type="submit" onclick="validarFormulario()">Enviar</button>
+    </div>
+    
+    <script>
+        function validarFormulario() {
+            let cpf = document.getElementById("cpf").value.trim();
+            let creci = document.getElementById("creci").value.trim();
+            let nome = document.getElementById("nome").value.trim();
+            let errorMessage = document.getElementById("error-message");
+            
+            if (cpf.length !== 11) {
+                errorMessage.textContent = "O CPF deve conter exatamente 11 caracteres.";
+                return;
+            }
+            if (creci.length < 2) {
+                errorMessage.textContent = "O Creci deve conter pelo menos 2 caracteres.";
+                return;
+            }
+            if (nome.length < 2) {
+                errorMessage.textContent = "O Nome deve conter pelo menos 2 caracteres.";
+                return;
+            }
+            
+            errorMessage.textContent = "";
+            alert("Cadastro realizado com sucesso!");
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
