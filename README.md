@@ -49,10 +49,8 @@ Editar
  
 🎯 Como Executar o Projeto
 
-1️⃣ Clone este repositório:
-git clone https://github.com/seu-usuario/tabela-corretores.git
+1️⃣ Configure o banco de dados MySQL utilizando o arquivo script_banco.sql.
+2️⃣ Atualize as credenciais do banco no arquivo config/database.php.
+3️⃣ Inicie um servidor local (XAMPP, WAMP ou PHP embutido).
+4️⃣ Acesse no navegador: http://localhost/tabela-corretores
 
-2️⃣ Configure o banco de dados MySQL utilizando o arquivo script_banco.sql.
-3️⃣ Atualize as credenciais do banco no arquivo config/database.php.
-4️⃣ Inicie um servidor local (XAMPP, WAMP ou PHP embutido).
-5️⃣ Acesse no navegador: http://localhost/tabela-corretores
